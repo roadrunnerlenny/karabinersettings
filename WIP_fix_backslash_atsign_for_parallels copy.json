@@ -1,0 +1,27 @@
+{
+    "title": "Backslash\\At-Sign fix for Mac",
+    "rules": [
+      {
+        "description": "Get Backlash and at sign on Alt-Gr",
+        "manipulators": [          
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "7",
+              "modifiers": {              
+                "mandatory" : [
+                  "right_control"
+                ]
+             }
+            },
+            "to": [
+              {
+                "key_code": "backslash"                
+              }
+            ]
+          }      
+        ]
+      }
+    ]
+  }
+  

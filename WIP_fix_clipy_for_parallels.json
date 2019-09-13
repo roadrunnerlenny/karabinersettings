@@ -1,0 +1,38 @@
+{
+  "title": "Fix clipy shortcut for parallels",
+  "rules": [
+    {
+      "description": "Fix clipy shortcut for parallels",
+      "manipulators": [          
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers": {              
+              "mandatory" : [
+                "shift","command"
+              ]
+           }
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "shift","control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                  "com\\.parallels\\.desktop\\.console",
+                  "com\\.parallels\\.winapp\\..*"                  
+              ]
+            }
+          ]
+        }      
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+    "title": "Home/End fix for Mac",
+    "rules": [
+      {
+        "description": "Home/end to beginning/end of line except Parallels",
+        "manipulators": [          
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "end",
+              "modifiers": {              
+                "optional" : [
+                  "shift"
+                ]
+             }
+            },
+            "to": [
+              {
+                "key_code": "e",
+                "modifiers": [
+                  "control"
+                ]
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_unless",
+                "bundle_identifiers": [
+                    "com\\.parallels\\.desktop\\.console",
+                    "com\\.parallels\\.winapp\\..*",
+                    "com\\.microsoft\\..*"
+                ]
+              }
+            ]
+          },
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "home",
+              "modifiers": {              
+                "optional" : [
+                  "shift"
+                ]
+             }                           
+            },
+            "to": [
+              {
+                "key_code": "a",
+                "modifiers": [
+                  "control"
+                ]
+              }
+            ],
+            "conditions": [
+              {
+                "type": "frontmost_application_unless",
+                "bundle_identifiers": [
+                    "com\\.parallels\\.desktop\\.console",
+                    "com\\.parallels\\.winapp\\..*",
+                    "com\\.microsoft\\..*"
+                ]
+              }
+            ]
+          }          
+        ]
+      }
+    ]
+  }
+  
